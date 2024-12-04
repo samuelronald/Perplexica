@@ -4,12 +4,16 @@
   "license": "MIT",
   "author": "ItzCrazyKns",
   "scripts": {
-    "start": "node dist/app.js"
-    "build": "tsc",
-    "dev": "nodemon --ignore uploads/ src/app.ts ",
-    "db:push": "drizzle-kit push sqlite",
-    "format": "prettier . --check",
-    "format:write": "prettier . --write"
+    "start": "node dist/app.js", // Simplifié pour démarrer directement
+    "build": "tsc", // Compile les fichiers TypeScript en JavaScript
+    "dev": "nodemon --watch src --ignore uploads/ src/app.ts", // Surveille les changements dans src/
+    "db:push": "drizzle-kit push sqlite", // Gestion de la base de données
+    "format": "prettier . --check", // Vérifie le formatage
+    "format:write": "prettier . --write" // Corrige automatiquement le formatage
+  },
+  "engines": {
+    "node": ">=16.x", // Version minimale de Node.js requise
+    "npm": ">=7.x" // Version minimale de NPM
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.10",
